@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boardwebapp2024
+  name: boardwebapp4
 spec:
   selector:
     matchLabels:
-      app: boardwebapp2024
+      app: boardwebapp4
   replicas: 1
   template:
     metadata:
       labels:
-        app: boardwebapp2024
+        app: boardwebapp4
     spec:
       containers:
-        - name: boardwebapp2024
+        - name: boardwebapp4
           image: vishal431/boardwebapp2024:latest
           imagePullPolicy: Always
           ports:
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: boardwebapp2024-service
+  name: boardwebapp4-service
 spec:
   selector:
-    app: boardwebapp2024
+    app: boardwebapp4
   ports:
     - protocol: TCP
       port: 8080
